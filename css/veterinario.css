@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --azul: #4fbac2e4;
+    --azul-2: #388e94;
+    --azul-3: #388e94d5;
+    --blanco: #ffffff;
+    --blanco-2: #dddddd;
+    --blanco-3: #c8c8ca;
+    
+    --negro: #1e1e21;
+    --negro-2: #29282e;
+    --negro-3: #36393f;
+    --title--shadow: 1px 1px 0 #000000 ,2px 2px 0 black, 3px 3px 0 black;
+  }
+    
+body {
+    background-color: var(--negro);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanco-2);
+}
+.hero{
+    color: var(--blanco-2);
+    width: 100%;
+    background-color: var(--negro);
+}
+.hero__container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo--text{
+    font-size: 1.5rem;
+}
+.logo--text span {
+    color: var(--azul);
+    font-size: 2.5rem;
+}
+.nav {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteiner__links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav--icono {
+    transition: all .3s ease;
+}
+.nav--icono:hover {
+    transform: scale(1.2);
+    transition: all .3s ease;
+}
+.cerrar-sesion{
+    color: var(--blanco-2);
+    position: relative;
+    transition: all .3s ease;
+}
+.cerrar-sesion:hover {
+    color: var(--azul);
+    transition: all .3s ease;
+}
+
+.hero__copy {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.copy--paragraph {
+    color: var(--blanco-3);
+    font-size: 1.3rem;
+    letter-spacing: 1.1px;
+    max-width: 800px;
+}
+.copy--paragraph--2 {
+    color: var(--blanco-3);
+    font-size: 1.3rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 15px;
+}
+.copy--paragraph span {
+    color: var(--azul-2);
+    font-weight: bold;
+}
+.copy__tittle {
+    color: var(--blanco-2);
+    font-size: 3rem;
+    letter-spacing: 1.1px;
+    margin: 10px 0 25px;
+}
+.copy__containtainer--opciones {
+    margin-top: 20px;
+}
+.copy__opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 7px 5px;
+    transition: all .3s ease;
+
+}
+.copy__opcion:hover {
+    color: var(--azul-3);
+    transition: all .3s ease;
+}
+.opciones--iconos {
+    height: 30px;
+}
+.paragraph__opciones {
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+}
+
+
+/* ESTILOS SECCION CLIENTES.PHP */
+.seccion__mensage--vacio {
+    width: 450px;
+    margin: 50px auto 20px;
+    border: solid 1px var(--azul-3);
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container__mensaje--vacio {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.icono__mensaje--vacio {
+    height: 30px;
+}
+.mensaje--vacio {
+    color: var(--azul-3);   
+    font-size: 1.1rem;
+}
+.btn {
+    border: solid var(--azul-3) 1px;
+    padding: 8px 46px;
+    color: var(--blanco);
+    transition: all .3s ease;
+    background-color: var(--azul-3);
+}
+.btn:hover {
+    background-color: var(--negro);
+    color: var(--azul-3);
+    transition: all .3s ease;
+}
+
+.container__tabla--clientes {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 30px;
+    overflow: auto;
+}
+/* Scroll table */
+.container__tabla--clientes::-webkit-scrollbar {
+    background: black;
+    height: 8px;
+} 
+.container__tabla--clientes::-webkit-scrollbar-thumb {
+    background-color: var(--azul-3);
+}   
+.container__tabla--clientes::-webkit-scrollbar-thumb:hover {
+    background-color: var(--azul-2);
+}
+.container__tabla--clientes::-webkit-scrollbar-track {
+    background-color: #000000;
+} 
+table {
+    border-collapse: collapse;
+    color: var(--blanco-3);
+    /* margin-top: 10px; */
+}
+
+/* End Scroll table */
+th {
+    padding: 14px 50px;
+    text-align: center;
+    background-color: #000000;
+    background-color: var(--azul-2);
+    color: black;
+}
+.campo__link {
+    padding: 14px 40px;
+    background-color: var(--azul-3);
+}
+td {
+    padding: 14px 8px;
+    text-align: center;
+    font-size: 14px;
+}
+tr {
+    background-color: var(--negro-3);
+}
+tr:nth-child(odd) {
+    background-color: var(--negro-2);
+}
+.link__operacion {
+    margin: 0 5px;
+    transition: all .3s ease;
+}
+.link__operacion:hover {
+    color: var(--azul-3);
+    transition: all .3s ease;
+}
+
+/* FIN ESTILOS SECCION CLIENTES.PHP */
+
+/* VER VETERINARIO */
+.container__content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.content__ficha--veterinario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+.card--veterinario {
+    width: 90%;
+    max-width: 400px;
+    border: solid 1px var(--azul-3);
+    /* padding: 20px 12px; */
+}
+.title__card--veterinario {
+    font-weight: 300;
+    text-align: center;
+    background-color: var(--azul-3);
+    margin-top: 25px;
+    line-height: 3rem;
+    color: var(--negro);
+}
+.title__card--veterinario span {
+    color: black;
+}
+.card--veterinaria__content {
+    padding: 15px 20px;
+}
+.content--dato {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+.card--paragraph {
+    color: var(--azul-3);
+    letter-spacing: .1rem;
+}
+.content--dato span{
+    color: var(--blanco-3);
+    letter-spacing: 1px;
+}
+.content--dato img {
+    height: 20px;
+}
+/* END VER VETERINARIO */
+
+@media only screen and (min-width:768px) {
+    .card--veterinario {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width:1100px){
+    .card--veterinario {
+        width: 322px;
+    }
+}

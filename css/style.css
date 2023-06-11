@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Raleway:wght@400;700&family=Rampart+One&display=swap');
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-family-logo: 'Pinyon Script', cursive;
+  --font-family-1: 'Open Sans', sans-serif;
+  --font-family-2: 'Raleway', sans-serif;
+  --font-family-3: 'Rampart One', cursive;
+
+  --primary-color: #4fbac2;
+  --primary-color-2: #388e94;
+  --secundary-color: rgb(219, 218, 218);
+  --secundary-color-2: #dddddd;
+  --secundary-color-3: #c8c8ca;
+  --bg-1-color: #29282e;
+  --bg-2-color: #36393f;
+  --title--shadow: 1px 1px 0 black ,2px 2px 0 black, 3px 3px 0 black;
+}
+body {
+  color: var(--secundary-color-3);
+  background-color: var(--bg-2-color);
+  font-family: var(--font-family-1);
+}
+a {
+  color: var(--secundary-color);
+  text-decoration: none;
+}
+.main {
+  width: 100%;
+  background-color: var(--bg-1-color);
+  padding: 1px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 22px;
+}
+.logo--text{
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.logo--text span{
+  color: var(--primary-color);
+  font-size: 2.1rem;
+}
+.article {
+  width: 90%;
+  margin: 15px auto;
+}
+.header {
+  margin: 15px 0;
+}
+.subtitle__article {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.tiulo__article {
+  font-size: 2.2rem;
+  color: var(--primary-color-2);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.container__descripcion__article {
+  width: 100%;
+  margin: 10px auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.img__article {
+  width: 100%;
+}
+.img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border: solid 2px var(--primary-color-2);
+}
+.subtitle__article-2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color-2);
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+.paragraph__article {
+  line-height: 1.7rem;
+}
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.type h3 {
+  font-size: 1.6rem;
+}
+.type p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-color-2);
+}
+.button {
+  margin: 35px auto;
+  text-align: center;
+}
+.enfermedad {
+  background-color: black;
+  padding: 8px 34px;
+  transition: all .3s ease;
+}
+.enfermedad:hover {
+  background-color: var(--primary-color-2);
+  color: black;
+  transition: all .3s ease;
+}

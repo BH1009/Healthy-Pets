@@ -1,0 +1,1258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Raleway:wght@400;700&family=Rampart+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-family-logo: 'Pinyon Script', cursive;
+    --font-family-1: 'Open Sans', sans-serif;
+    --font-family-2: 'Raleway', sans-serif;
+    --font-family-3: 'Rampart One', cursive;
+    --Weights-400: 400;
+    --Weights-700: 700;
+    --primary-color: #4fbac2;
+    --primary-color-2: #388e94;
+    --secundary-color: rgb(255, 255, 255);
+    --secundary-color-2: #dddddd;
+    --secundary-color-3: #c8c8ca;
+    --bg-1-color: #29282e;
+    --bg-2-color: #36393f;
+    --title--shadow: 1px 1px 0 black ,2px 2px 0 black, 3px 3px 0 black;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body::-webkit-scrollbar{
+    width: 8px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color-2);
+    border-radius: 1px;
+  }
+  body::-webkit-scrollbar-track-piece{
+    background-color: rgb(0, 0, 0)
+  }
+/* Commun Style */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }  
+  .color--active {
+    color: var(--primary-color);
+  }
+  section{
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  li{
+    list-style: none;
+  }
+  .text-center {
+    /* margin: 0 auto; */
+    text-align: center;
+  }
+  .margin-boton-10 {
+    margin-bottom: 10px;
+  }
+  /* text-shadow: var(--title--shadow); */
+  
+/* Fin commun Style  */
+body{
+    color: var(--secundary-color-3);
+    background-color: var(--bg-2-color);
+    font-family: var(--font-family-1);
+}
+
+/* Seccioon Hero */
+  .hero{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.753) 0%, rgba(0, 0, 0, 0.763) 100%), url(../imagenes/perro-1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .hero__container{
+    height: 100vh;
+    max-height: 750px;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Barra de navegacion */
+ .nav {
+    width: 100%;
+    padding: 10px 5%;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.998);
+    transition: height .5s ease;
+  }
+  .nav--active {
+    background-color: #06060651;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .flex-nav{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  .nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo--text{
+    font-family: var(--font-family-logo);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .logo--text span{
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+  .nav-toggle{
+    border: transparent;
+    background: transparent;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  /* Links */
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease-out;
+  }
+  .nav-open{
+    height: 100vh;
+    transition: all .3s ease-out;
+  }
+  .link{
+    list-style: none;
+    margin: 40px 0;
+    padding: 10px 0;
+    color: var(--secundary-color);
+    cursor: pointer;
+  }
+  .link-login{
+    color: var(--primary-color);
+  }
+  .link-hover{
+    position: relative;
+    transition: color .3s ease;
+  }
+  .link-hover:hover {
+    color: var(--primary-color);
+    transition: color .3s ease;
+  }
+  .link-hover::before {
+    content: "";
+    width: 5px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  .link-hover:hover:before {
+    width: 100%;
+    transition: width 0.3s ease;
+  }
+
+  .list__button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon-desplegar{
+    font-size: 12px;
+  }
+  
+  .list__button{
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+  }
+  .list__button-click{
+    overflow: visible;
+  }
+
+  .list__show{
+    background-color: var(--bg-1-color);
+    font-size: 1rem;
+    position: absolute;
+    top: 35px;
+  }
+  .list__inside{
+    font-size: 14px;
+    color: var(--secundary-color);
+    padding: 10px 35px 10px 15px;
+    
+  }
+  .list__inside:hover{
+    background-color: var(--bg-2-color);
+    transition: all .3s ease;
+  }
+  /* Fin links */
+  /* Fin Barra de navegacion */
+
+  /* Contenido del hero section */
+  .hero__content {
+    height: 100vh;
+    max-height: 917px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    }
+
+    /* Texto del hero (Copy) */
+    .copy {
+      text-align: inherit;
+      margin: auto;
+      max-width: 500px;
+    }
+    .copy__title {
+      font-size: 2.8rem;
+      position: relative;
+      color: var(--secundary-color);
+      text-shadow: 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 0 0 black;
+      font-family: var(--font-family-1);
+      font-weight: var(--Weights-700);
+    }
+    .copy__title--active {
+      font-size: 3.1rem;
+      color: var(--primary-color);
+    }
+    .copy__paragraph {
+      line-height: 2rem;
+      margin: 30px auto 25px;
+      width: 80%;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 22px;
+      color: var(--primary-color);
+      font-size: 14px;
+      border: 1px solid var(--primary-color);
+      transition: all 0.3s ease;
+      background-color: #030303;
+    }
+    .btn:hover {
+      background-color: var(--primary-color);
+      color: black;
+      transition: all 0.3s ease;
+    }
+    /* Fin del texto de la seccion hero (Copy) */
+
+    /* Imagen de la seccion hero */
+    .hero__img {
+      display: block;
+      width: 50%;
+      max-width: 450px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      display: none;
+    }
+    .bg--bubble {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      display: none;
+    }
+    .bg--bubble--1 {
+      bottom: 9%;
+      left: 45%;
+      background-image: url(../imagenes/bg--bubble-1.jpg);
+      background-size: cover;
+    }
+    .bg--bubble--2 {
+      background-image: url(../imagenes/bg--bubble-2.jpg);
+      background-size: cover;
+      transform: rotate(-15deg);
+      bottom: 15%;
+      left: 26%;
+    }
+    .bg--bubble--3 {
+      background-image: url(../imagenes/bg--bubble-3.jpg);
+      background-size: cover;
+      transform: rotate(-5deg);
+      bottom: 45%;
+      right: 42%;
+    }
+    .bg--bubble--4 {
+      background-image: url(../imagenes/bg--bubble-4.jpg);
+      background-size: cover;
+      transform: rotate(-5deg);
+      bottom: 15%;
+      right: 38%;
+    }
+    .bg--bubble--5 {
+      bottom: 33%;
+      right: 5%;
+      background-image: url(../imagenes/bg--bubble-5.jpg);
+      background-size: cover;
+      transform: rotate(-5deg);
+    }
+    .bg--bubble--6 {
+      background-image: url(../imagenes/bg--bubble-6.jpg);
+      background-size: cover;
+      transform: rotate(12deg);
+      bottom: 70%;
+      left: 5%;
+    }
+    .bg--bubble--7 {
+      background-image: url(../imagenes/bg--bubble-7.jpg);
+      background-size: cover;
+      transform: rotate(28deg);
+      top: 25%;
+      left: 48%;
+    }
+    .bg--bubble--8 {
+      background-image: url(../imagenes/bg--bubble-8.jpg);
+      background-size: cover;
+      transform: rotate(20deg);
+      top: 20%;
+      left: 28%;
+    }
+    /* Fin Imagen de la seccion hero */
+    /* Fin Contenido del hero section */
+  /* Fin de Seccioon Hero */
+
+  /*************** Section  enfermedades***************/
+    .enfermedades{
+      background-color: var(--bg-1-color);
+    }
+    .content{
+      width: 90%;
+      margin: 0 auto;
+    }
+    .content-tipo-1{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+    .content-tipo-2{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+    .content__text{
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .content__title{
+      font-size: 1.8rem;
+      text-shadow: var(--title--shadow);
+      color: var(--secundary-color);
+      font-family: var(--font-family-2);
+      font-weight: var(--Weights-700);
+      letter-spacing: .1rem;
+      margin-bottom: 20px;
+    }
+    .title-center{
+      margin: 0px auto 25px;
+      text-align: center;
+    }
+    .content__subtitle{
+      font-size: 1.4rem;
+      font-weight: var(--Weights-400);
+      margin-bottom: 20px;
+    }
+    .subtitle__underline{
+      display: inline-block;
+      position: relative;
+    }
+    .subtitle__underline::after{
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color-2);
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      border-radius: 20px;
+    }
+    .content__paragraph{
+      line-height: 1.8rem;
+      font-weight: 1.1rem;
+      margin: 10px auto 25px;
+    }
+    .content__img{
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      max-width:400px;
+    }
+    .img-ajuste{
+      width: 70%;
+    }
+  /* Fin Section  enfermedades*/
+
+  /* Servicios */
+  .servicios{
+    background-color: black;
+  }
+  .container__servicios{
+      padding: 40px 0px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  /* Servicios Buscador */
+  .serch{
+    margin-top: 40px;
+  }
+  .input--serch{
+      color: rgb(188, 188, 188);
+      font-size: 16px;
+      background: transparent;
+      width: 25px;
+      height: 25px;
+      padding: 14px;
+      border: solid 3px var(--primary-color-2);
+      outline: none;
+      border-radius: 35px;
+      transition: all 0.5s;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 var(--primary-color-2);
+  }
+  .input--serch::placeholder{
+    color: #8a8a8a;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+  }
+  .input--serch:focus::placeholder{
+    opacity: 1;
+  }
+  .input--serch:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 var(--primary-color);
+  }
+  .input--serch:focus,
+  .input--serch:not(:placeholder-shown){
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px var(--primary-color);
+  }
+  .enfermedad__container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+  }
+  .enfermedad{
+    margin: 0 20px 15px 0;
+    border-radius: 30px;
+    padding: 6px 24px;
+    border: solid 1px var(--primary-color-2);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+  .enfermedad:hover{
+    transition: all .3s ease-in-out;
+    background-color: var(--primary-color-2);
+    color: #131315;
+    transform: translateY(-5px);
+  }
+  .filtro{
+    display: none;
+  }
+/* end Servicios Buscador */
+
+  /* Fin servicios */
+
+  /********* Perros **********/
+  .perros{
+    position: relative;
+  }
+  .content-tipo-3{
+    margin-top: 50px;
+  }
+  .perro__card{
+    width: 80%;  
+    max-width: 400px;
+    line-height: 1.7rem;
+    box-shadow: 3px 0 0px var(--primary-color);
+    border-radius: 8px;
+    padding: 25px 20px;
+    color: var(--secundary-color-3);
+    background-color: var(--bg-1-color);
+    display: flex;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+  }
+  .perro__card:hover {
+    box-shadow: 1px 0 0 2px var(--primary-color);
+    transition: box-shadow 0.3s;
+  }
+  .card__paragraph{
+    margin: auto;
+  }
+  .img__card-top{
+    height: 40px;
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: -20px;
+    z-index: -10;
+    transition: all 0.3s ease-in-out;
+  }
+  .perro__card:hover .img__card-top {
+    transition: all 0.3s ease-in-out;
+    top: -40px;
+  }
+  /********* Fin Perros **********/
+
+  /* Section Dog Paseo */
+  .section__header {
+    width: 100%;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+  .section__subtitle {
+    width: 100%;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    font-family: var(--font-family-2);
+    font-weight: var(--Weights-400);
+    color: var(--secundary-color);
+    text-shadow: var(--title--shadow);
+  }
+.paseo{
+  background-color: var(--bg-1-color);
+}
+.section__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;   /* RESPONSE DISING cambiar a 90%  */
+  margin: 0 auto;
+  gap: 25px;
+  text-align: center;
+}
+.paseo__beneficio{
+  width: 210px; 
+  height: 210px;
+  background-image: url(../imagenes/bg-mancha.png);
+  background-size: cover;
+  display: flex;
+  padding: 10px 15px 10px 25px;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  position: relative;
+}
+.paseo__img{
+  height: 75px;
+  position: absolute; top: -20px; left: 60%;
+  transition: transform .3s ease;
+  transform: rotateZ(-10deg);
+}
+.paseo__beneficio p{
+  margin: auto;
+  font-size: 1.2rem; 
+  font-family: var(--font-family-2);
+  color: var(--bg-1-color);
+  font-weight: var(--Weights-700);
+}
+.paseo__beneficio:hover .paseo__img{
+  transition: transform .3s ease-in-out;
+  transform: rotateZ(15deg);
+} 
+/* END Section Dog Paseo */
+
+  /********* Alimentacion ************/
+  .subtitle-alimentacion{
+    font-family: var(--font-family-2);
+    font-weight: var(--Weights-400);
+    color: var(--secundary-color);
+    text-shadow: var(--title--shadow);
+  }
+  .comida--gatos__card{
+    background-color: var(--bg-1-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    outline: solid 1px var(--primary-color);
+    outline-offset: 5px;
+    padding: 20px 20px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+  }
+
+  .img--comida--gato{
+    display: none;
+  }
+  /********* Fin Alimentcion ************/
+
+  /* Section Calor */
+.container__calor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.calor__circulo{
+  width: 350px; height: 350px;
+  background-color: var(--primary-color-2);
+  display: none;
+  border: solid 3px var(--bg-1-color);
+  border-radius: 97% 73% 100% 67% / 90% 70%;
+  position: relative;
+}
+.calor__circulo::after{
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 350px; height: 350px;
+  background-color: var(--bg-2-color);
+  border-radius: 97% 73% 100% 67% / 90% 70%;
+  z-index: -1;
+  border: solid 2px var(--bg-1-color);
+}
+.calor__circulo::before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 350px; height: 350px;
+  background-color: var(--bg-2-color);
+  border-radius: 97% 73% 100% 67% / 90% 70%;
+  z-index: -1;
+  border: solid 2px var(--bg-1-color);
+}
+.calor__title{
+  margin: auto 0;
+  padding: 30px;
+  color: black;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.calor__content{
+  width: 80%;
+  text-align: left;
+}
+.calor__elemento{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: -3px 0 0px var(--primary-color);
+  background-image: linear-gradient(120deg, #18191aba  0%, #29282ee7 100%);
+  
+  transition: box-shadow 0.5s;
+}
+.calor__elemento:hover{
+  box-shadow: -1px 0 0 2px var(--primary-color);
+}
+.calor__elemento--2{
+  margin-left: 35px;
+}
+.img--sun{
+  height: 15px;
+}
+.calor__elemento p{
+  font-size: 1rem; 
+  letter-spacing: 1px;
+}
+
+/* END Section Calor */
+
+  /* Maltrato */
+  .matrato-animal{
+    background-color: var(--bg-1-color);
+  }
+  .lista-denuncia{
+    list-style: none;
+  }
+  .lista-denuncia__elemento{
+    margin: 15px auto 10px;
+  }
+  .lista-denuncia__elemento i{
+    margin-right: 10px;
+  }
+  /* Fin Maltrato */
+
+  /* Section curiosidades */
+.curiosidades{
+  position: relative;
+  background-color: var(--bg-2-color);
+}
+.curiosidades::after, .curiosidades::before{
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color-2);
+  bottom: 0;
+}
+.curiosidades::after{
+  top: 0;
+}
+.container--curiosidades{
+  width: 80%;
+}
+.title-curiosidades{
+  width: auto;
+  display: inline-block;
+}
+.bg-circulo{
+  position: relative;
+  z-index: 100;
+}
+.bg-circulo::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4FBAC2;
+  border: solid 2px var(--bg-color-1);
+  position: absolute;
+  bottom:-10px;
+  left: 0;
+  z-index: -10;
+}
+.content--curiosidades{
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card--curiosidades{
+  width: 18%; min-width: 270px;
+  text-align: start; letter-spacing: .1rem; line-height: 1.5rem;
+  height: 200px;
+  padding: 30px 25px;
+  background-color: var(--bg-1-color);
+  box-shadow: 0 3px 0 var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all .3s;
+}
+.card--curiosidades:hover{
+  transition: all .3s;
+  box-shadow: 0 1px 0 2px var(--primary-color);
+}
+.numero--curiosidades{
+  font-family: var(--font-family-3);
+  color: var(--primary-color);
+  height: 30px;
+  width: 30px;
+  font-size: 3.5rem;
+  position: absolute;
+  top: -1rem;
+  right: 10px;
+  z-index: 100;
+  background-color: var(--bg-color-2);
+  border-radius: 50%;
+}
+/* END Section curiosidades */
+
+ /* Section Vacunas */
+.vacunas__content{
+  width: 100%;
+  position: relative;
+  margin-top: 60px;
+}
+.vacunas__card{
+  padding: 30px 32px;
+  text-align: start;
+  border-left: solid 4px var(--primary-color);
+  background: linear-gradient(120deg, #18191ae0  0%, #29282ef0 100%);
+  position: relative;
+  width: 90%;
+  box-shadow: 10px 1px 10px 1px rgba(0, 0, 0, 0.527);
+} 
+.vanunas__img--1{
+  width: 50%;
+  min-width: 400px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.vacuna__etiqueta{
+  padding: 22px 20px;
+  background: linear-gradient(120deg, #0f1010e0  0%, #26262cdc 100%);
+  border-left: solid 4px var(--primary-color);
+}
+.vacunas__content--2{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+.vacunas__content--3{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column-reverse;
+}
+.vacunas__card--2{
+  border-right: solid 4px var(--primary-color);
+  border-left: none;
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.484);
+  position: relative;
+  margin-top: 20px;
+}
+.vacunas__lista::marker{
+  font-size: 1rem;
+}
+.vacunas__lista{
+ margin-bottom: 8px; 
+}
+.vacuna__etiqueta--2{
+  border-left: none;
+  border-right: 4px solid var(--primary-color);
+}
+.vc--bg {
+  background: linear-gradient(120deg, #0f1010e0  0%, #26262cdc 100%);  width: 90%;
+  margin: 40px auto ;
+  padding: 28px 20px;
+  box-shadow: 10px 1px 10px 1px rgba(0, 0, 0, 0.527);
+  border-left: solid 4px var(--primary-color);
+}
+.vacunas__wrap {
+  width: 90%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.vacunas__wrap--paragraph {
+  margin: 25px 0 10px;
+  line-height: 1.5rem;
+  font-weight: 1.1rem;
+}
+.imagen__plan--caunal {
+  width: 100%;
+  margin: 0 auto;
+}
+.img_plan--vacunal {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+}
+/* End Section Vacunas */
+
+
+  /* Gatos */
+  .gatos{
+    background-color: var(--bg-1-color);
+  }
+  /* Fin Gatos */
+
+  /* Ambiente */
+  .ambiente{
+    background-color: var(--bg-1-color);
+    padding: 1px;
+  }
+  /* Fin Ambiente */
+
+/* Section chequeo */
+.chequeo__content{
+  padding: 0;
+}
+.imagen--chequeo{
+  width: 100%;
+  height: 400px;
+  background-image: url(../imagenes/chequeo.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border-radius: 10px;
+  margin: 40px auto 80px;
+}
+.chequeo__card{
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+  width: 90%;
+  border-radius: 6px;
+  background-color: rgba(25, 26, 27, 0.612);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px 30px;
+  border: solid 1px var(--primary-color);
+}
+/* End Section chequeo */
+
+/* REFERENCIAS */
+.referencia {
+  width: 100%;
+  background-color: #030303;
+  padding: 50px 0;
+}
+.container__referencias {
+  width: 90%;
+  margin: 0 auto;
+}
+.container__referencias h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+}
+.container__referencias h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--secundary-color-3);
+  margin-bottom: 15px;
+}
+.container__referencias p {
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  color: var(--primary-color-2);
+  margin-bottom: 10px;
+}
+
+/* END REFERENCIAS */
+
+
+/* FOOTER */
+.footer__container {
+  max-width: 1170px;
+  margin: 0 auto 25px;
+  position: relative;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  background-color: #1c1d21;
+  padding: 70px 0 35px;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--secundary-color);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  background-color: var(--primary-color-2);
+  height: 2px;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--secundary-color-3);
+  font-weight: 300;
+  display: block;
+  transition: all .3s ease;
+}
+.footer-col ul li a:hover {
+  color: var(--secundary-color);
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.24);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all .3s ease;
+} 
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: white;
+}
+.footer h3 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 35px;
+}
+
+
+/* END FOOTER */
+
+
+  /***** Responsive desing ******/
+
+  /********* Seccion hero **********/
+    @media only screen and (min-width:768px){
+      .hero{
+        background: #030303;
+      }
+      .hero__content{
+        width: 60%;
+        text-align: left;
+        padding-left: 5%;
+      }
+      .copy__paragraph{
+        margin: 30px 0 25px;
+        width: 100%;
+      }
+      .hero__img{
+        display: block;
+      }
+      .bg--bubble{
+        display: block;
+      }
+      .bg--bubble--1{
+        left: 35%;
+      }
+      .bg--bubble--2{
+        bottom: 5%;
+        left: 6%;
+      }
+      .bg--bubble--3{
+        top: 13%;
+        right: 10%;
+      }
+      .bg--bubble--4{
+        bottom: 25%;
+        left: 50%;
+      }
+      .bg--bubble--6{
+        top: 16%;
+      }
+      .bg--bubble--8{
+        top: 12%;
+      }
+
+      /* NAV BAR */
+      .nav-toggle{
+        display: none;
+      }
+      .nav-header{
+        display: block;
+      }
+      .logo--text{
+        font-size: 1.5rem;
+      }
+      .logo--text span{
+        font-size: 2.2rem;
+      }
+      .flex-nav{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .links{
+        height: auto;
+        display: flex;
+        gap: 20px;
+        align-items: center; 
+        overflow: visible;
+
+      }
+      .link{
+        margin: 0;
+      }
+      .copy__title {
+        font-size: 3rem;
+        position: relative;
+        color: var(--secundary-color);
+        text-shadow: 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 0 0 black;
+        font-family: var(--font-family-1);
+        font-weight: var(--Weights-700);
+      }
+      .copy__title--active {
+        font-size: 3.4rem;
+        color: var(--primary-color);
+      }
+      /********** Fin Hero ************/
+
+      .content-tipo-1{
+        flex-direction: row;
+        align-items: center;
+      }
+      .content-tipo-2{
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .content__text{
+        width: 60%;
+        max-width: 700px;
+        margin: 0;
+        text-align: left;
+      }
+      .content__title{
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+      .title-ajuste{
+        margin-bottom: 15px;
+      }
+      .content__img{
+        width: 40%;
+      }
+      .content-tipo-1 .content__paragraph{
+        padding-right: 20px;
+      }
+      .content-tipo-2 .content__paragraph{
+        padding-left: 20px;
+      }
+      .lista-denuncia{
+        padding-left: 20px;
+      }
+
+      /* Perros */
+      .content-tipo-3{
+        flex-wrap: wrap;
+        max-width: 800px;
+      }
+      .card-tipo-1{
+        width: 45%;
+        height: 180px;
+        max-width: 320px;
+      }
+      .card-tipo-2{
+        width: 95%;
+        height: 180px;
+        max-width: 720px;
+      }
+      .img__card-top{
+        height: 50px;
+      }
+      .perro__card{
+        padding: 25px 35px;
+      }
+      .card__paragraph {
+        font-size: 1.1rem;
+      }
+      .perro__card:hover .img__card-top {
+        top: -50px;
+      }
+      /* Fin Perros */
+
+      /* Paseo */
+      .section__content{
+        width: 90%;
+      }
+      /* Fin Paseo */
+
+        /* Section Calor */
+      .container__calor{
+        flex-direction: row; 
+      }
+      .calor__circulo{
+        display: flex;
+      }
+      .calor__circulo p{
+        position: absolute;
+        right: -100px;
+        top: 0; 
+      }
+      .calor__content{
+        width: 40%;
+      }
+      .calor__elemento p{
+        font-size: 1.2rem;
+      }
+      .calor__title--none {
+        display: none;
+      }
+      /* END Section Calor */
+
+       /* Section Vacunas */
+      .vacunas__content{
+        margin-top: 120px;
+      }
+      .vacunas__card{
+        width: 90%;
+      }
+      .vacunas__content--2{
+        flex-direction: row;
+      }
+      .vacunas__content--3{
+        flex-direction: row;
+      }
+      .vacunas__content--4{
+        flex-direction: row-reverse;
+      } 
+      .vacunas__content--42 {
+        flex-direction: row-reverse;
+      }
+      .vacunas__wrap {
+        flex-direction: row;
+      }
+      /* END Section Vacunas */
+
+      .ambiente .content__title{
+        padding: 0 10px;
+      }
+      .border-left{
+        border-left: solid 2px var(--primary-color);
+      }
+      .border-left .content__paragraph{
+        text-align: center;
+        padding-left: 10px;
+      }
+
+      /* Chequeo */
+      .imagen--chequeo{
+        width: 60%;
+      }
+      .chequeo__card{
+        position: absolute;
+        left: 70%;
+        top: 40%;
+      }
+    }
+
+    
+    /* End Chequeo */
+
+
+

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Raleway:wght@400;700&family=Rampart+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-family-logo: 'Pinyon Script', cursive;
+    --font-family-1: 'Open Sans', sans-serif;
+    --font-family-2: 'Raleway', sans-serif;
+    --primary-color: #4fbac2;
+    --primary-color-2: #388e94;
+    --error-color: #d01b1b;
+    --secundary-color: #ffffff;
+    --bg-1-color: #1f1d1d;
+    --bg-2-color: #36393f;
+    --title--shadow: 1px 1px 0 black ,2px 2px 0 black, 3px 3px 0 black;
+  }
+  body::-webkit-scrollbar{
+    width: 8px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color-2);
+    border-radius: 1px;
+  }
+  body::-webkit-scrollbar-track-piece{
+    background-color: rgb(0, 0, 0)
+  }
+body{
+    background-color: black;
+    color: var(--secundary-color);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  } 
+  .color--active {
+    color: var(--primary-color);
+  }
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-color);
+
+    height: 70px;
+    padding: 0 3%;
+    background-color: black;
+}
+.logo--text{
+font-family: var(--font-family-logo);
+color: white;
+font-size: 1.3rem;
+font-weight: 400;
+}
+.logo--text span{
+color: var(--primary-color);
+font-size: 2rem;
+}
+.link{
+    padding: 7px 32px;
+    background-color: var(--primary-color);
+    color: black;
+    letter-spacing: .1rem;
+    transition: all .3s ease;
+    border-radius: 20px;
+    border: solid 1px transparent;
+}
+.link:hover{
+    background-color: transparent;
+    transition: all .3s ease;
+    background-color: black;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+}
+/* Fin nav */
+
+.main__container{
+    width: 100%;
+    display: flex;
+    background-color: rgb(22, 22, 22);
+    min-height: calc(100vh - 70px);
+    padding: 30px 0;
+}
+.container{
+    width: 90%;
+    max-width: 400px;
+    min-width: 350px;
+    border-radius: 20px;
+    padding: 30px 25px;
+    border: solid 1px var(--primary-color);
+    box-shadow: 0 0 10px 1px var(--primary-color);
+    margin: auto;
+    background-color: var(--bg-1-color);
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title{
+    font-family: var(--font-family-2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.title.activo{
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+.title.activo::after{
+    content: "";
+    width: 2rem;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    box-shadow: 0 0 10px 1px var(--primary-color);
+}
+.subtitle{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: var(--font-family-1);
+}
+.form{
+    display: none;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.form.activo{
+    display: block;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+
+.formulario__grupo{
+    margin-top: 20px;
+}
+.formulario__grupo-input{
+    position: relative;
+}
+
+/* parrafos */
+.paragraph {
+    font-size: 14px;
+    color: #ffffffab;
+    font-family: var(--font-family-1);
+    margin: 20px 0px 0px 10px;
+}
+
+/********** Inputs ********/
+.formulario__input{
+    caret-color: var(--primary-color);
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--bg-2-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    outline: none;
+    color: var(--primary-color);
+    transition: all .3s ease; 
+}
+.formulario__input:focus{
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px 1px var(--primary-color);
+}
+
+.formulario__grupo-incorrecto div .formulario__input{
+    border:solid 2px var(--error-color);
+    color: var(--error-color);
+}
+.formulario__grupo-incorrecto div .formulario__input:focus{
+    box-shadow: 0 0 10px 1px var(--error-color);
+}
+
+/********** Fin Inputs ********/
+
+
+/*********** Icono del input  ************/
+.formulario__validacion-estado{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10px;
+    z-index: 100;
+    font-size: 14px;
+    opacity: 0; 
+}
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: #0f8f8f;
+    opacity: 1; 
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: rgb(177, 2, 2);
+    opacity: 1; 
+}
+/*********** Fin Icono del input  ************/
+
+
+/*********** Mensaje de error ************/
+.formulario__input-error{
+    font-size: 13px;
+    margin: 10px 0 15px 25px;
+    color: rgb(192, 0, 0);
+    display: none;
+}
+.formulario__input-error-activo{
+    display: block;
+}
+/*********** Fin Mensaje de error ************/
+
+
+
+/*********** Checkbox *********** */
+.form input[type="checkbox"] {
+    display: none;
+}
+.form .checkbox label {
+    color: #0f8f8f;
+    padding: 5px 15px 5px 36px;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all .2s ease-in;
+}
+.form .checkbox label:hover {
+    background-color: #ffffff2d;
+}
+.form .checkbox label::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: none;
+    border: 2px solid #0f8f8f;
+    position: absolute;
+    left: 12px;
+    top: 6px;
+}
+.form input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    background-color: #0f8f8f;
+    color: white;
+    border-radius: 2px;
+}
+.form input[type="checkbox"]:checked + label::before {
+    display: none;
+}
+/*********** Fin Checkbox *********** */
+
+/************* Botones ***********/
+.container__btn{
+    margin-top: 25px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btn{ 
+    border: none;
+    font-size: 14px;
+    color: var(--secundary-color);
+    cursor: pointer;
+    border-radius: 30px;
+    border: solid 1px var(--primary-color);
+}
+.btn-1{
+    background-color: var(--primary-color);
+    color: var(--bg-1-color);
+    border: solid 1px var(--primary-color);
+    transition: all .3s ease;
+    padding: 8px 32px;
+}
+.btn-1:hover{
+    background-color: var(--bg-1-color);
+    color: var(--primary-color);
+}
+.btn-2{
+    color: var(--primary-color);
+    border: none;
+    padding: 0;
+    position: relative;
+}
+.btn-2::after{
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    border: 50%;
+    background-color: var(--primary-color);
+    bottom: -3px;
+    left: 0;
+    transition: all .3s ease;
+}
+.btn-2:hover::after{
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.btn__registro-disable{
+    opacity: .5;
+}
+.btn__registro-disable:hover{
+    background-color: var(--primary-color);
+    color: var(--bg-1-color);
+}
+/************* Fin Botones *************/
